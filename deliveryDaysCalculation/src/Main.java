@@ -1,42 +1,42 @@
 public class Main {
-    public static void main(String[] args) {
-        int distance = 60;
-        System.out.println(DeliveryDaysCalculation(distance));
+        public static void main(String[] args) {
+            int distance = 59;
+            System.out.println(DeliveryDaysCalculation(distance));
 
-
-
-    }
-
-    public static String DeliveryDaysCalculation (int distance){
-        int deliveryDays = 0;
-        String result = "";
-
-        if(distance < 60){
-            deliveryDays = distance / 20 + 1;
-        }
-
-        if (deliveryDays == 0) {
-            result = "Äîñòàâêà íå âîçìîæíà";
-        } else {
-            result = "Íà ðàññòîÿíèè " + distance + " êì äîñòàâêà ñîñòàâèò " + deliveryDays + " " + days(deliveryDays);
-        }
-
-        return result;
-
-
-    }
-
-    public static String days (int days) {
-        switch(days){
-            case 1:
-                return "äåíü";
-            case 2:
-            case 3:
-                return "äíÿ";
-            default:
-                return "Îøèáêà";
 
 
         }
-    }
+
+        public static String DeliveryDaysCalculation (int distance){
+            int deliveryDays = 0;
+            String result = "";
+
+            if(distance < 60){
+                deliveryDays = distance / 20 + 1;
+            }
+
+            if (deliveryDays == 0) {
+                result = "Ð”Ð¾ÑÑ‚Ð°Ð²ÐºÐ° Ð½Ðµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð°";
+            } else {
+                result = "ÐÐ° Ñ€Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ð¸ " + distance + " ÐºÐ¼ Ð´Ð¾ÑÑ‚Ð°Ð²ÐºÐ° ÑÐ¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ " + deliveryDays + " " + days(deliveryDays);
+            }
+
+            return result;
+
+
+        }
+
+        public static String days (int days) {
+            switch(days){
+                case 1:
+                    return "Ð´ÐµÐ½ÑŒ";
+                case 2:
+                case 3:
+                    return "Ð´Ð½Ñ";
+                default:
+                    return "Ð¾ÑˆÐ¸Ð±ÐºÐ°";
+
+
+            }
+        }
 }
