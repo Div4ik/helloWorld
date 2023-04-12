@@ -27,16 +27,10 @@ public class Main {
         }
 
         public static String days (int days) {
-            switch(days){
-                case 1:
-                    return "день";
-                case 2:
-                case 3:
-                    return "дня";
-                default:
-                    return "ошибка";
-
-
-            }
+            return switch (days) {
+                case 1 -> "день";
+                case 2, 3 -> "дня";
+                default -> "ошибка";
+            };
         }
 }
