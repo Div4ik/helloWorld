@@ -3,6 +3,7 @@ package Book;
 public class Main {
     public static void main(String[] args) {
 
+
         Author tolstoy = new Author("Лев", "Толстой");
         Author pushkin = new Author("Александр", "Пушкин");
 

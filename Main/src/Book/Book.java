@@ -23,6 +23,7 @@ public class Book {
         return yearOfPublication;
     }
 
+
     public Author getNameAuthor() {
         return nameAuthor;
     }
