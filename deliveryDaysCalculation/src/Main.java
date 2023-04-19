@@ -6,7 +6,6 @@ public class Main {
 
 
         }
-
         public static String DeliveryDaysCalculation (int distance){
             int deliveryDays = 0;
             String result = "";
@@ -22,10 +21,7 @@ public class Main {
             }
 
             return result;
-
-
         }
-
         public static String days (int days) {
             return switch (days) {
                 case 1 -> "день";
