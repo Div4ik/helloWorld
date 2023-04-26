@@ -1,5 +1,7 @@
 package Book;
 
+import java.util.Objects;
+
 public class Book {
     //Создайте класс Book, который содержит в себе данные о названии,
     // авторе и годе публикации книги. Типы полей
@@ -28,6 +30,7 @@ public class Book {
         return nameAuthor;
     }
 
+
     public void setYearOfPublication(int yearOfPublication) {
         this.yearOfPublication = yearOfPublication;
     }
@@ -39,4 +42,15 @@ public class Book {
                 ", Автор: " + nameAuthor;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book book)) return false;
+        return Objects.equals(getTitleBook(), book.getTitleBook()) && Objects.equals(getNameAuthor(), book.getNameAuthor());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getTitleBook(), getNameAuthor());
+    }
 }
